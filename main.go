@@ -32,7 +32,7 @@ func connectDatabase() {
 			Colorful:                  true,        // Disable color
 		},
 	)
-	database, err := gorm.Open(mysql.Open("root:devdba_sys@tcp(127.0.0.1:3307)/gorm_serializer?charset=utf8&parseTime=true"), &gorm.Config{Logger: newLogger})
+	database, err := gorm.Open(mysql.Open("ehis_dev:devdba_user@tcp(127.0.0.1:3307)/gorm_serializer?charset=utf8&parseTime=true"), &gorm.Config{Logger: newLogger})
 
 	if err != nil {
 		panic("Failed to connect to databse!")
